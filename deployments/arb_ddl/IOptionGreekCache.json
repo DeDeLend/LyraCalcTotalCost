@@ -1,0 +1,239 @@
+{
+  "address": "0x4b236Ac3B8d4666CbdC4E725C4366382AA30d86b",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getGlobalCache",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "minUpdatedAt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minUpdatedAtPrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxUpdatedAtPrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSkewVariance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxIvVariance",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "int256",
+                  "name": "netDelta",
+                  "type": "int256"
+                },
+                {
+                  "internalType": "int256",
+                  "name": "netStdVega",
+                  "type": "int256"
+                },
+                {
+                  "internalType": "int256",
+                  "name": "netOptionValue",
+                  "type": "int256"
+                }
+              ],
+              "internalType": "struct IOptionGreekCache.NetGreeks",
+              "name": "netGreeks",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct IOptionGreekCache.GlobalCache",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "boardId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getOptionBoardCache",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "strikes",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expiry",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "iv",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "int256",
+                  "name": "netDelta",
+                  "type": "int256"
+                },
+                {
+                  "internalType": "int256",
+                  "name": "netStdVega",
+                  "type": "int256"
+                },
+                {
+                  "internalType": "int256",
+                  "name": "netOptionValue",
+                  "type": "int256"
+                }
+              ],
+              "internalType": "struct IOptionGreekCache.NetGreeks",
+              "name": "netGreeks",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint256",
+              "name": "updatedAt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "updatedAtPrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSkewVariance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ivVariance",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IOptionGreekCache.OptionBoardCache",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strikeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getStrikeCache",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "boardId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "strikePrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "skew",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "int256",
+                  "name": "callDelta",
+                  "type": "int256"
+                },
+                {
+                  "internalType": "int256",
+                  "name": "putDelta",
+                  "type": "int256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "stdVega",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "callPrice",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "putPrice",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct IOptionGreekCache.StrikeGreeks",
+              "name": "greeks",
+              "type": "tuple"
+            },
+            {
+              "internalType": "int256",
+              "name": "callExposure",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "putExposure",
+              "type": "int256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "skewVariance",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IOptionGreekCache.StrikeCache",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "numDeployments": 1
+}

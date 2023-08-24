@@ -1,0 +1,95 @@
+{
+  "address": "0x18C9D966Fc60966c4bb0F5d098A005Ba8093380d",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "enum IOptionBuilder.ProtocolType[]",
+          "name": "protocolsArrays",
+          "type": "uint8[]"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "parametersArray",
+          "type": "bytes[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "productType",
+          "type": "uint256"
+        }
+      ],
+      "name": "consolidationOfTransactions",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strikeId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "positionId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "iterations",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum IOptionMarket.OptionType",
+              "name": "optionType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "setCollateralTo",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minTotalCost",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxTotalCost",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "referrer",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct IOptionBuilder.TradeInputParameters",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "encodeFromLyra",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "paramData",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "numDeployments": 1
+}

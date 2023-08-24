@@ -1,0 +1,56 @@
+{
+  "address": "0xB619913921356904Bf62abA7271E694FD95AA10D",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getLiquidity",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "freeLiquidity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "burnableLiquidity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "reservedCollatLiquidity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pendingDeltaLiquidity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "usedDeltaLiquidity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "NAV",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "longScaleFactor",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ILiquidityPool.Liquidity",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "numDeployments": 1
+}

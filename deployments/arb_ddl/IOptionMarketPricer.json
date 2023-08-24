@@ -1,0 +1,587 @@
+{
+  "address": "0xdacEE745b517C9cDfd7F749dFF9eB03f51a27A13",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "expiry",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointA",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pointB",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "coefficient",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTimeWeightedFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "timeWeightedFee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isBuy",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "isForceClose",
+              "type": "bool"
+            },
+            {
+              "internalType": "enum IOptionMarket.TradeDirection",
+              "name": "tradeDirection",
+              "type": "uint8"
+            },
+            {
+              "internalType": "enum IOptionMarket.OptionType",
+              "name": "optionType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expiry",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "strikePrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "spotPrice",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "freeLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "burnableLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "reservedCollatLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "pendingDeltaLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "usedDeltaLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "NAV",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "longScaleFactor",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ILiquidityPool.Liquidity",
+              "name": "liquidity",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct IOptionMarket.TradeParameters",
+          "name": "trade",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "optionPrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "int256",
+              "name": "preTradeAmmNetStdVega",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "postTradeAmmNetStdVega",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "callDelta",
+              "type": "int256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "volTraded",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ivVariance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vega",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IOptionGreekCache.TradePricing",
+          "name": "pricing",
+          "type": "tuple"
+        },
+        {
+          "internalType": "uint256",
+          "name": "skew",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVarianceFee",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "varianceFeeCoefficient",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vega",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vegaCoefficient",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "skew",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "skewCoefficient",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ivVariance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ivVarianceCoefficient",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "varianceFee",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IOptionMarketPricer.VarianceFeeComponents",
+          "name": "varianceFeeComponents",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isBuy",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "isForceClose",
+              "type": "bool"
+            },
+            {
+              "internalType": "enum IOptionMarket.TradeDirection",
+              "name": "tradeDirection",
+              "type": "uint8"
+            },
+            {
+              "internalType": "enum IOptionMarket.OptionType",
+              "name": "optionType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expiry",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "strikePrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "spotPrice",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "freeLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "burnableLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "reservedCollatLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "pendingDeltaLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "usedDeltaLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "NAV",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "longScaleFactor",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ILiquidityPool.Liquidity",
+              "name": "liquidity",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct IOptionMarket.TradeParameters",
+          "name": "trade",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "optionPrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "int256",
+              "name": "preTradeAmmNetStdVega",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "postTradeAmmNetStdVega",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "callDelta",
+              "type": "int256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "volTraded",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ivVariance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vega",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IOptionGreekCache.TradePricing",
+          "name": "pricing",
+          "type": "tuple"
+        }
+      ],
+      "name": "getVegaUtilFee",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "int256",
+              "name": "preTradeAmmNetStdVega",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "postTradeAmmNetStdVega",
+              "type": "int256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vegaUtil",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "volTraded",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "NAV",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vegaUtilFee",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IOptionMarketPricer.VegaUtilFeeComponents",
+          "name": "vegaUtilFeeComponents",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isBuy",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "isForceClose",
+              "type": "bool"
+            },
+            {
+              "internalType": "enum IOptionMarket.TradeDirection",
+              "name": "tradeDirection",
+              "type": "uint8"
+            },
+            {
+              "internalType": "enum IOptionMarket.OptionType",
+              "name": "optionType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expiry",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "strikePrice",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "spotPrice",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "freeLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "burnableLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "reservedCollatLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "pendingDeltaLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "usedDeltaLiquidity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "NAV",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "longScaleFactor",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ILiquidityPool.Liquidity",
+              "name": "liquidity",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct IOptionMarket.TradeParameters",
+          "name": "trade",
+          "type": "tuple"
+        },
+        {
+          "internalType": "uint256",
+          "name": "boardBaseIv",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "strikeSkew",
+          "type": "uint256"
+        }
+      ],
+      "name": "ivImpactForTrade",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "newBaseIv",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newSkew",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pricingParams",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "optionPriceFeeCoefficient",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "optionPriceFee1xPoint",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "optionPriceFee2xPoint",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "spotPriceFeeCoefficient",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "spotPriceFee1xPoint",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "spotPriceFee2xPoint",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vegaFeeCoefficient",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "standardSize",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "skewAdjustmentFactor",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IOptionMarketPricer.PricingParameters",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "numDeployments": 1
+}

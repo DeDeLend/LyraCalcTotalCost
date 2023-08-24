@@ -1,0 +1,49 @@
+{
+  "address": "0x7D135662818d3540bd6f23294bFDB6946c52C9AB",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "optionMarket",
+          "type": "address"
+        },
+        {
+          "internalType": "enum IBaseExchangeAdapter.PriceType",
+          "name": "pricing",
+          "type": "uint8"
+        }
+      ],
+      "name": "getSpotPriceForMarket",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "spotPrice",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "rateAndCarry",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "numDeployments": 1
+}
